@@ -24,10 +24,11 @@ async def async_setup_entry(hass: core.HomeAssistant, config_entry: ConfigEntry,
     controller = hass.data[DOMAIN][config_entry.entry_id][CONTROLLER]
 
     options = fixDict(config_entry.options)
+    _LOGGER.critical("Options: " + str(options))
     for e in effect.effects:
         effc = effect.effectIdByName(e)
         if effc in options:
-            sett = options[effc]
+            sett = effect.Settings(options[effc])
             if sett is not None:
                 controller.effectSettings[effc] = (API.getEffectByName(e, sett))
             else:

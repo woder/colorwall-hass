@@ -60,7 +60,7 @@ class ColorWallOptionsFlowHandler(config_entries.OptionsFlow):
         self.config_entry = config_entry
         self.step = 0
         self.values = {}
-        if not self.config_entry.options:
+        if self.config_entry.options:
             self.vals = fixDict(self.config_entry.options)
         else:
             self.vals = {}
@@ -90,9 +90,7 @@ class ColorWallOptionsFlowHandler(config_entries.OptionsFlow):
         if self.step == len(effect.data_schema):
             return self.async_create_entry(
                 title="ColorWall",
-                data={
-                    "options": self.values
-                })
+                data=self.values)
 
         if len(effect.data_schema[self.step]) == 0:
             self.step = self.step + 1
@@ -114,9 +112,7 @@ class ColorWallOptionsFlowHandler(config_entries.OptionsFlow):
             changed[self.step] = user_input
             return self.async_create_entry(
                 title="ColorWall",
-                data={
-                    "options": changed
-                })
+                data=changed)
 
         data = effect.data_schema[self.step]
         if self.step in self.vals:

@@ -35,9 +35,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             for key, value in eff.items():
                 vals[str(key.schema)] = key.default()
 
-            sett = effect.Settings(vals)
-            effects[eId] = sett
+            effects[eId] = vals
 
+        _LOGGER.critical("Effects dict: " + str(effects))
         hass.config_entries.async_update_entry(
             entry, options=effects
         )
