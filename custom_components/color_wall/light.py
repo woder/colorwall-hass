@@ -9,14 +9,11 @@ from homeassistant.exceptions import PlatformNotReady
 
 from .api import ColorWallConnectionError
 from .api import API
-from . import DOMAIN, UNDO_UPDATE_LISTENER, CONTROLLER, fixDict, remap
+from . import DOMAIN, CONTROLLER, fixDict, remap
 
-import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
 # Import the device class from the component that you want to support
 from homeassistant.components.light import (
-    ATTR_BRIGHTNESS, PLATFORM_SCHEMA, Light, SUPPORT_EFFECT, SUPPORT_BRIGHTNESS, ATTR_EFFECT, LightEntity,
+    ATTR_BRIGHTNESS, SUPPORT_EFFECT, SUPPORT_BRIGHTNESS, ATTR_EFFECT, LightEntity,
     SUPPORT_COLOR, ATTR_HS_COLOR)
 
 _LOGGER = logging.getLogger(__name__)
