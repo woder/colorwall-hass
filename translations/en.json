@@ -1,0 +1,66 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Setup ColorWall integration",
+        "description": "Enter the IP address of the ColorWall device",
+        "data": {
+          "host": "Host"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to device!",
+      "unknown": "Unknown error!"
+    },
+    "abort": {
+      "already_configured": "A device with the given IP is already configured!"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure effects",
+        "description": "Configure a single effect or all effects",
+        "data": {
+          "type": "Effect type (no edit)",
+          "speed": "Speed",
+          "width": "Width",
+          "bpm": "BPM (Beats per Minute)",
+          "style": "Color Style",
+          "baseHue": "Base Hue",
+          "deltaHue": "Delta Hue (How much change per cycle)",
+          "direction": "Direction"
+        }
+      },
+      "effect": {
+        "title": "Configure single effects",
+        "description": "Configure light effects settings",
+        "data": {
+          "type": "Effect type (no edit)",
+          "speed": "Speed",
+          "width": "Width",
+          "bpm": "BPM (Beats per Minute)",
+          "style": "Color Style",
+          "baseHue": "Base Hue",
+          "deltaHue": "Delta Hue (How much change per cycle)",
+          "direction": "Direction"
+        }
+      },
+      "all": {
+        "title": "Configure all effects",
+        "description": "Configure light effects settings",
+        "data": {
+          "type": "Effect type (no edit)",
+          "speed": "Speed",
+          "width": "Width",
+          "bpm": "BPM (Beats per Minute)",
+          "style": "Color Style",
+          "baseHue": "Base Hue",
+          "deltaHue": "Delta Hue (How much change per cycle)",
+          "direction": "Direction"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "domain": "color_wall",
+  "name": "ColorWall",
+  "version": "0.0.1",
+  "documentation": "https://wltd.org",
+  "dependencies": [],
+  "codeowners": ["@woder"],
+  "requirements": [],
+  "config_flow": true
+}
