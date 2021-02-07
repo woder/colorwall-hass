@@ -12,3 +12,6 @@ Each panel will also show up as an entity, allowing for control of on/off, color
 This integration can be installed simply by copying the files located in the "custom_components" folder to the custom_components folder in your instance. 
 Alternatively, you can install it using a custom repository in HACS. To do so, visit the HACS menu in Home Assistant and click on the 3 dots in the top right corner.
 Then click on "Custom repositories" and add the URL of this repository in the "Add custom reposity URL" field.
+
+# Build guide
+Check out [the build guide here!](https://wltd.org/posts/how-to-build-a-diy-rgb-wall-for-cheap-with-colorwall)
